@@ -1,11 +1,11 @@
 {
   "name": "cra-ts-template-sh4nnongoh",
-  "main": "template.json",
-  "version": "0.1.0",
+  "version": "1.1.2",
   "keywords": [
     "react",
     "create-react-app",
-    "template"
+    "template",
+    "typescript"
   ],
   "description": "The base template for an opiniated version of Create React App for Typescript by sh4nnongoh.",
   "repository": {
@@ -15,10 +15,10 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">=10"
+    "node": ">=14"
   },
   "bugs": {
-    "url": "https://github.com/facebook/create-react-app/issues"
+    "url": "https://github.com/sh4nnongoh/cra-ts-template-sh4nnongoh/issues"
   },
   "files": [
     "template",
