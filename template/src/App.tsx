@@ -5,7 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import { Navbar, Button } from "react-bulma-components";
+import { Navbar } from "react-bulma-components";
 import Home from "./Home/Home";
 import TestState from "./TestState/TestState";
 import "bulma/css/bulma.min.css";
