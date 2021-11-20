@@ -5,7 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import { Navbar } from "react-bulma-components";
+import { Container, Navbar } from "react-bulma-components";
 import Home from "./Home/Home";
 import TestState from "./TestState/TestState";
 import "bulma/css/bulma.min.css";
@@ -14,10 +14,10 @@ import TestURLState from "./TestURLState/TestURLState";
 const App: FunctionComponent = (): ReactElement => {
   const [value, setValue] = useState("Default State");
   return (
-    <div>
+    <div className=".app has-background-dark has-text-light">
       <Router>
         <Navbar color="primary">
-          <Navbar.Container>
+          <Navbar.Brand>
             <Navbar.Item renderAs={Link} to="/">
               Home
             </Navbar.Item>
@@ -27,21 +27,22 @@ const App: FunctionComponent = (): ReactElement => {
             <Navbar.Item renderAs={Link} to="/test-url-state/" textColor="dark">
               Test URL State
             </Navbar.Item>
-          </Navbar.Container>
+          </Navbar.Brand>
         </Navbar>
-        <Switch>
-          <Route path="/test-state">
-            <TestState value={value} setValue={setValue} />
-          </Route>
-          <Route path="/test-url-state/:state?/">
-            <TestURLState />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+        <Container className="app">
+          <Switch>
+            <Route path="/test-state">
+              <TestState value={value} setValue={setValue} />
+            </Route>
+            <Route path="/test-url-state/:state?/">
+              <TestURLState />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </Container>
       </Router>
-      <div className="app" />
     </div>
   );
 };
