@@ -4,13 +4,13 @@ import userEvent from "@testing-library/user-event";
 import App from "../App";
 const userStory = `
 Given no inital state,
-When user navigates to the Test State page,
-Then user the default value of Default State in the input box
+When user navigates to the Test URL State page,
+Then user sees the default value of Default State in the input box
 `;
 // eslint-disable-next-line jest/valid-title
 describe(userStory, () => {
   render(<App />);
-  userEvent.click(screen.getByText(/Test State/i));
+  userEvent.click(screen.getByText(/Test URL State/i));
   it("shows the default value of Default State in the input box", () => {
     const element = screen.getByDisplayValue(/Default State/i);
     expect(element).toBeInTheDocument();

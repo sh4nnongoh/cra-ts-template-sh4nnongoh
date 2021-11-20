@@ -10,6 +10,7 @@ import Home from "./Home/Home";
 import TestState from "./TestState/TestState";
 import "bulma/css/bulma.min.css";
 import "./App.css";
+import TestURLState from "./TestURLState/TestURLState";
 const App: FunctionComponent = (): ReactElement => {
   const [value, setValue] = useState("Default State");
   return (
@@ -23,11 +24,17 @@ const App: FunctionComponent = (): ReactElement => {
             <Navbar.Item renderAs={Link} to="/test-state" textColor="dark">
               Test State
             </Navbar.Item>
+            <Navbar.Item renderAs={Link} to="/test-url-state/" textColor="dark">
+              Test URL State
+            </Navbar.Item>
           </Navbar.Container>
         </Navbar>
         <Switch>
           <Route path="/test-state">
             <TestState value={value} setValue={setValue} />
+          </Route>
+          <Route path="/test-url-state/:state?/">
+            <TestURLState />
           </Route>
           <Route path="/">
             <Home />
