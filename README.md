@@ -3,7 +3,7 @@
 ## Quick Start
 
 ```
-npx create-react-app my-app --template file:<path-to-template>/cra-template-sh4nnongoh/
+npx create-react-app my-app --template file:<path-to-template>/cra-ts-template-sh4nnongoh/
 ```
 
 Follow the instructions here [https://yarnpkg.com/getting-started/install], to install the latest YARN package manager.
