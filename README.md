@@ -3,10 +3,11 @@
 ## Quick Start
 
 ```
-npx create-react-app my-app --template file:<path-to-template>/cra-ts-template-sh4nnongoh/
+yarn create react-app my-app --template file:<path-to-template>/cra-ts-template-sh4nnongoh/
 ```
 
-Follow the instructions here [https://yarnpkg.com/getting-started/install], to install the latest YARN package manager.
+WIP:
+Follow the instructions here [https://yarnpkg.com/getting-started/install], to upgrade to the latest YARN package manager inside the new repository.
 
 ## VSCode setup [Deprecated]
 If you are using VSCode, do download the `Settings Sync` extension and download the working VSCode settings using this gist: `26ac81902215c7de37d83000a1e1d2d4`
