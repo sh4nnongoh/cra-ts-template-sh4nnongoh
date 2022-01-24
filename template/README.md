@@ -48,7 +48,10 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## Custom Scripts
 
-You may choose to add the following to the package.json file.
+Do add the following to the package.json file.
 
-### `yarn lint`
-`npx eslint --ext .ts,.tsx src/ --fix`
+```
+"lint": "yarn eslint --ext .ts,.tsx src/ --fix",
+"css-build": "node-sass --omit-source-map-url src/App.scss src/App.autogen.css",
+"css-watch": "yarn css-build -- --watch"
+```

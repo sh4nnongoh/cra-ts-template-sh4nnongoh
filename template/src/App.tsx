@@ -8,8 +8,7 @@ import {
 import { Container, Navbar } from "react-bulma-components";
 import Home from "./Home/Home";
 import TestState from "./TestState/TestState";
-import "bulma/css/bulma.min.css";
-import "./App.css";
+import "./App.autogen.css";
 import TestURLState from "./TestURLState/TestURLState";
 const App: FunctionComponent = (): ReactElement => {
   const [value, setValue] = useState("Default State");

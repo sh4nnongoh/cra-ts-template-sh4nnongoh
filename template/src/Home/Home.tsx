@@ -21,7 +21,7 @@ const Home: FunctionComponent = (): ReactElement => (
       Learn React
     </a>
     <br />
-    <Button color="primary">My Bulma button</Button>
+    <Button color="brand">My Bulma button</Button>
   </Container>
 );
 export default Home;
