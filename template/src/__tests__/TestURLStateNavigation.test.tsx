@@ -7,7 +7,6 @@ Given no inital state,
 When user navigates to the Test URL State page,
 Then user sees the default value of Default State in the input box
 `;
-// eslint-disable-next-line jest/valid-title
 describe(userStory, () => {
   render(<App />);
   userEvent.click(screen.getByText(/Test URL State/i));

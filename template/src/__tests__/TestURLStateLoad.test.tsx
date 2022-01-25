@@ -6,7 +6,6 @@ Given no inital state,
 When user navigates to the Test URL State page with a specified state in the URL,
 Then user sees the specified state in the input box
 `;
-// eslint-disable-next-line jest/valid-title
 describe(userStory, () => {
   window.history.pushState({}, "Test page", "/test-url-state/new%20state");
   render(<App />);

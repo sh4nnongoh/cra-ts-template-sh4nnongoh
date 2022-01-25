@@ -10,7 +10,6 @@ When  user navigates to the Test State page,
       navigates back to the Test State page,
 Then user sees a default value of New State in the input box
 `;
-// eslint-disable-next-line jest/valid-title
 describe(userStory, () => {
   render(<App />);
   userEvent.click(screen.getByText(/Test State/i));
