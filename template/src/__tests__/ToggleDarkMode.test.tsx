@@ -11,7 +11,7 @@ describe(userStory, () => {
   render(<App />);
   it("toggles between the 2 themes", () => {
     const darkModeElement = screen.getByAltText(/DarkModeToggle/i);
-    const themedButton = screen.getByRole("button", {name: /My Bulma Button/i})
+    const themedButton = screen.getByRole("button", { name: /My Bulma Button/i });
     expect(themedButton).toHaveClass("theme-light");
     userEvent.click(darkModeElement);
     expect(themedButton).toHaveClass("theme-dark");
