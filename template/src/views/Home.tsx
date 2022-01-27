@@ -1,5 +1,5 @@
 import React, { FunctionComponent, ReactElement } from "react";
-import { Button, Container } from "react-bulma-components";
+import { Container } from "react-bulma-components";
 import { ReactComponent as Logo } from "../assets/logo.svg";
 import MyButton from "../components/MyButton";
 import "./Home.css";
@@ -22,7 +22,6 @@ const Home: FunctionComponent = (): ReactElement => (
       Learn React
     </a>
     <br />
-    {/* <Button color="brand">My Bulma button</Button> */}
     <MyButton text="My Bulma button" />
   </Container>
 );
