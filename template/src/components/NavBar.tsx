@@ -1,5 +1,5 @@
 import React, {
-  FunctionComponent, ReactElement, useContext
+  FunctionComponent, ReactElement, useContext, useState
 } from "react";
 import {
   Link
@@ -10,27 +10,31 @@ import {
 import DarkModeToggle from "../assets/darkmode.png";
 import { DarkModeContext } from "../contexts/contexts";
 const NavBar: FunctionComponent = (): ReactElement => {
+  const [active, setActive] = useState(false);
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
   return (
-    <Navbar color={darkMode ? "primary" : "secondary"}>
+    <Navbar color={darkMode ? "primary" : "secondary"} active={active}>
       <Navbar.Brand>
         <Navbar.Item renderAs={Link} to="/">
           Home
         </Navbar.Item>
+        <Navbar.Burger onClick={() => setActive(!active)} />
       </Navbar.Brand>
-      <Navbar.Container align="left">
-        <Navbar.Item renderAs={Link} to="/test-state" textColor="dark">
-          Test State
-        </Navbar.Item>
-        <Navbar.Item renderAs={Link} to="/test-url-state/" textColor="dark">
-          Test URL State
-        </Navbar.Item>
-      </Navbar.Container>
-      <Navbar.Container align="right">
-        <Navbar.Item renderAs={Button} onClick={toggleDarkMode}>
-          <Image src={DarkModeToggle} alt="DarkModeToggle" />
-        </Navbar.Item>
-      </Navbar.Container>
+      <Navbar.Menu>
+        <Navbar.Container align="left">
+          <Navbar.Item renderAs={Link} to="/test-state" textColor={darkMode ? "primary" : "secondary"}>
+            Test State
+          </Navbar.Item>
+          <Navbar.Item renderAs={Link} to="/test-url-state/" textColor={darkMode ? "primary" : "secondary"}>
+            Test URL State
+          </Navbar.Item>
+        </Navbar.Container>
+        <Navbar.Container align="right">
+          <Navbar.Item renderAs={Button} onClick={toggleDarkMode} text>
+            <Image src={DarkModeToggle} alt="DarkModeToggle" />
+          </Navbar.Item>
+        </Navbar.Container>
+      </Navbar.Menu>
     </Navbar>
   );
 };

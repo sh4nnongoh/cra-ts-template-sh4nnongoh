@@ -1,5 +1,5 @@
 import React, {
-  FunctionComponent, ReactElement, useState, useContext
+  FC, ReactElement, useState, useContext
 } from "react";
 import {
   BrowserRouter as Router, Switch, Route
@@ -13,7 +13,7 @@ import TestURLState from "./views/TestURLState";
 import { DarkModeContext } from "./contexts/contexts";
 import NavBar from "./components/NavBar";
 import "./App.autogen.css";
-const App: FunctionComponent = (): ReactElement => {
+const App: FC = (): ReactElement => {
   const [value, setValue] = useState("Default State");
   const { darkMode } = useContext(DarkModeContext);
   return (
