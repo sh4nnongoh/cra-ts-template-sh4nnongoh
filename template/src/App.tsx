@@ -13,6 +13,7 @@ import TestURLState from "./views/TestURLState";
 import { DarkModeContext } from "./contexts/contexts";
 import NavBar from "./components/NavBar";
 import "./App.autogen.css";
+import BTC from "./views/BTC";
 const App: FC = (): ReactElement => {
   const [value, setValue] = useState("Default State");
   const { darkMode } = useContext(DarkModeContext);
@@ -25,6 +26,9 @@ const App: FC = (): ReactElement => {
         <NavBar />
         <Container className="app">
           <Switch>
+            <Route path="/BTC">
+              <BTC />
+            </Route>
             <Route path="/test-state">
               <TestState value={value} setValue={setValue} />
             </Route>

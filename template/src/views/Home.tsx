@@ -1,9 +1,9 @@
-import React, { FunctionComponent, ReactElement } from "react";
+import React, { FC, ReactElement } from "react";
 import { Container } from "react-bulma-components";
 import { ReactComponent as Logo } from "../assets/logo.svg";
 import MyButton from "../components/MyButton";
 import "./Home.css";
-const Home: FunctionComponent = (): ReactElement => (
+const Home: FC = (): ReactElement => (
   <Container>
     <Logo className="home-logo" />
     <p>

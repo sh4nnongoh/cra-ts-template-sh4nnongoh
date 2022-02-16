@@ -1,3 +1,4 @@
+import axios, { AxiosInstance } from "axios";
 import { createContext } from "react";
 export const DarkModeContext = createContext({
   darkMode: false,
@@ -5,3 +6,4 @@ export const DarkModeContext = createContext({
     // stub
   }
 });
+export const AxiosContext = createContext<{axios?: AxiosInstance}>({});

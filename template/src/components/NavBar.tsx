@@ -22,11 +22,14 @@ const NavBar: FunctionComponent = (): ReactElement => {
       </Navbar.Brand>
       <Navbar.Menu>
         <Navbar.Container align="left">
-          <Navbar.Item renderAs={Link} to="/test-state" textColor={darkMode ? "primary" : "secondary"}>
+          <Navbar.Item renderAs={Link} to="/test-state" textColor={darkMode ? "secondary" : "primary"}>
             Test State
           </Navbar.Item>
-          <Navbar.Item renderAs={Link} to="/test-url-state/" textColor={darkMode ? "primary" : "secondary"}>
+          <Navbar.Item renderAs={Link} to="/test-url-state/" textColor={darkMode ? "secondary" : "primary"}>
             Test URL State
+          </Navbar.Item>
+          <Navbar.Item renderAs={Link} to="/BTC/" textColor={darkMode ? "secondary" : "primary"}>
+            BTC
           </Navbar.Item>
         </Navbar.Container>
         <Navbar.Container align="right">
