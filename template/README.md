@@ -53,5 +53,6 @@ Do add the following to the package.json file.
 ```
 "lint": "yarn eslint --ext .ts,.tsx src/ --fix",
 "css-build": "node-sass --omit-source-map-url src/App.scss src/App.autogen.css",
-"css-watch": "yarn css-build -- --watch"
+"css-watch": "yarn css-build -- --watch",
+"cors": "cd cors-anywhere && yarn && node server.js"
 ```
