@@ -2,7 +2,7 @@ import React, {
   FC, ReactElement, useContext, useEffect, useState
 } from "react";
 import { Container } from "react-bulma-components";
-import { AxiosContext } from "../contexts/contexts";
+import { AxiosContext } from "../contexts/Contexts";
 import { Markets } from "../types/ftx";
 const BTC: FC = (): ReactElement => {
   const { axios } = useContext(AxiosContext);

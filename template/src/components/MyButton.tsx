@@ -1,6 +1,6 @@
 import React, { FC, ReactElement, useContext } from "react";
 import { Button } from "react-bulma-components";
-import { DarkModeContext } from "../contexts/contexts";
+import { DarkModeContext } from "../contexts/Contexts";
 const MyButton: FC<{
   text: string
 }> = ({ text }): ReactElement => {

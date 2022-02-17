@@ -10,7 +10,7 @@ import {
 import Home from "./views/Home";
 import TestState from "./views/TestState";
 import TestURLState from "./views/TestURLState";
-import { DarkModeContext } from "./contexts/contexts";
+import { DarkModeContext } from "./contexts/Contexts";
 import NavBar from "./components/NavBar";
 import "./App.autogen.css";
 import BTC from "./views/BTC";
