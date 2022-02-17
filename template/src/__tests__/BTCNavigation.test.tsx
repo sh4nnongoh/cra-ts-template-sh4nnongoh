@@ -21,7 +21,11 @@ describe(userStory, () => {
       }
     });
     axios.create = jest.fn().mockReturnValue(mockAxios);
-    render(<AxiosContextWrapper><App /></AxiosContextWrapper>);
+    render(
+      <AxiosContextWrapper>
+        <App />
+      </AxiosContextWrapper>
+    );
   });
   it("shows the current BTC price", async () => {
     expect(axios.create).toHaveBeenCalledWith({
