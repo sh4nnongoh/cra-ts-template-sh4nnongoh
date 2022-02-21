@@ -48,16 +48,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## Custom Scripts
 
-Excute the following to download the submodules.
+Excute the following to setup the repo.
 ```
-./scripts/cors.sh
-```
-
-Do add the following to the package.json file.
-
-```
-"lint": "yarn eslint --ext .ts,.tsx src/ --fix",
-"css-build": "node-sass --omit-source-map-url src/App.scss src/App.autogen.css",
-"css-watch": "yarn css-build -- --watch",
-"cors": "git submodule update && cd cors-anywhere && yarn && node server.js"
+node ./scripts/setup.js
 ```
