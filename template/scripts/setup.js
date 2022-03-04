@@ -22,3 +22,6 @@ execSync("yarn");
 
 // git add submodules
 execSync("git submodule add https://github.com/Rob--W/cors-anywhere.git cors-anywhere");
+
+// generate the CSS file
+execSync("yarn css-build");
