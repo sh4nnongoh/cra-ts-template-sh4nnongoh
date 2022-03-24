@@ -1,7 +1,7 @@
-import axios from "axios";
-import React, { FC, ReactElement } from "react";
+import axios, { AxiosInstance } from "axios";
+import React, { createContext, FC, ReactElement } from "react";
 import config from "../config/config";
-import { AxiosContext } from "./Contexts";
+export const AxiosContext = createContext<{axios?: AxiosInstance}>({});
 const AxiosContextWrapper: FC = ({ children }): ReactElement => {
   // Multiple axios instances with different configs can be created,
   // and passed to the underlying child components.

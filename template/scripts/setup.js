@@ -10,10 +10,21 @@ const updatedObjects = {
     "lint": "yarn eslint --ext .ts,.tsx src/ --fix",
     "css-build": "node-sass --omit-source-map-url src/App.scss src/App.autogen.css",
     "css-watch": "yarn css-build -- --watch",
-    "cors": "git submodule update && cd cors-anywhere && yarn && node server.js"
+    "cors": "git submodule init && git submodule update && cd cors-anywhere && yarn && node server.js"
   },
   "jest": {
-    "resetMocks": false
+    "resetMocks": false,
+    "collectCoverageFrom": ["./src/**"],
+    "coverageThreshold": {
+      "global": {
+        "lines": 90
+      }
+    },
+    "coveragePathIgnorePatterns": [
+      "reportWebVitals.ts",
+      "react-app-env.d.ts",
+      "index.tsx"
+    ]
   }
 };
 console.log(updatedObjects);

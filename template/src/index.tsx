@@ -1,16 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import AxiosContextWrapper from "./contexts/AxiosContext";
 import DarkModeContextWrapper from "./contexts/DarkModeContext";
 import reportWebVitals from "./reportWebVitals";
 ReactDOM.render(
   <React.StrictMode>
-    <AxiosContextWrapper>
-      <DarkModeContextWrapper>
-        <App />
-      </DarkModeContextWrapper>
-    </AxiosContextWrapper>
+    <DarkModeContextWrapper>
+      <App />
+    </DarkModeContextWrapper>
   </React.StrictMode>,
   document.getElementById("root")
 );

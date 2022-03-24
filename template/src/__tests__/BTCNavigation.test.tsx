@@ -3,7 +3,6 @@ import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import axios, { AxiosStatic } from "axios";
 import App from "../App";
-import AxiosContextWrapper from "../contexts/AxiosContext";
 jest.mock("axios");
 const userStory = `
 Given no inital state,
@@ -22,9 +21,7 @@ describe(userStory, () => {
     });
     axios.create = jest.fn().mockReturnValue(mockAxios);
     render(
-      <AxiosContextWrapper>
-        <App />
-      </AxiosContextWrapper>
+      <App />
     );
   });
   it("shows the current BTC price", async () => {

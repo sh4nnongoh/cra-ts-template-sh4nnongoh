@@ -8,7 +8,7 @@ import {
   Navbar, Button, Image
 } from "react-bulma-components";
 import DarkModeToggle from "../assets/darkmode.png";
-import { DarkModeContext } from "../contexts/Contexts";
+import { DarkModeContext } from "../contexts/DarkModeContext";
 const NavBar: FunctionComponent = (): ReactElement => {
   const [active, setActive] = useState(false);
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
