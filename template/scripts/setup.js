@@ -7,6 +7,8 @@ const updatedObjects = {
   ...objects,
   "scripts": {
     ...objects.scripts,
+    "start": "yarn css-build && react-scripts start",
+    "test": "react-scripts test --coverage",
     "lint": "yarn eslint --ext .ts,.tsx src/ --fix",
     "css-build": "node-sass --omit-source-map-url src/App.scss src/App.autogen.css",
     "css-watch": "yarn css-build -- --watch",
