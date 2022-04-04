@@ -31,7 +31,7 @@ describe(userStory, () => {
     });
     userEvent.click(screen.getByText(/BTC/i));
     expect(screen.getByText(/-/i)).toBeInTheDocument();
-    await waitFor(() => expect(mockAxios.get).toHaveBeenCalledWith("/markets/BTC/USD"));
-    expect(screen.getByText(/123/i)).toBeInTheDocument();
+    expect(mockAxios.get).toHaveBeenCalledWith("/markets/BTC/USD");
+    await waitFor(() => expect(screen.getByText(/123/i)).toBeInTheDocument());
   });
 });
