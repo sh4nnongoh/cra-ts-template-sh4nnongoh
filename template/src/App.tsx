@@ -13,11 +13,11 @@ import TestURLState from "./views/TestURLState";
 import NavBar from "./components/NavBar";
 import "./App.autogen.css";
 import BTC from "./views/BTC";
-import { DarkModeContext } from "./contexts/DarkModeContext";
+import { DarkModeStateContext } from "./contexts/DarkModeContext";
 import AxiosContextWrapper from "./contexts/AxiosContext";
 const App: FC = (): ReactElement => {
   const [value, setValue] = useState("Default State");
-  const { darkMode } = useContext(DarkModeContext);
+  const { darkMode } = useContext(DarkModeStateContext);
   return (
     <AxiosContextWrapper>
       <Router>

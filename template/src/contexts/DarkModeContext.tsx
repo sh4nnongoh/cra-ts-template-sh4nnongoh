@@ -1,25 +1,27 @@
 import React, {
   createContext, FC, ReactElement, useCallback, useMemo, useState
 } from "react";
-export const DarkModeContext = createContext({
-  darkMode: false,
-  toggleDarkMode: () => {
-    // stub
-  }
+export const DarkModeStateContext = createContext({
+  darkMode: false
 });
-// TO-DO: https://stackoverflow.com/questions/54119268/how-to-use-react-hooks-context-with-multiple-values-for-providers
+export const DarkModeSetStateContext = createContext(() => { /* stub */ });
+// Reference to how one should use useContext:
+// https://stackoverflow.com/questions/54119268/how-to-use-react-hooks-context-with-multiple-values-for-providers
 const DarkModeContextWrapper: FC = ({ children }): ReactElement => {
   const [darkMode, setDarkMode] = useState(JSON.parse(localStorage.getItem("DarkMode") || "false"));
-  const toggleDarkMode = () => {
+  const toggleDarkMode = useCallback(() => {
     localStorage.setItem("DarkMode", JSON.stringify(!darkMode));
-    return setDarkMode(!darkMode);
-  };
-  const callback = useCallback(toggleDarkMode, [toggleDarkMode]);
-  const value = useMemo(() => ({ darkMode, toggleDarkMode: callback }), [darkMode, callback]);
+    setDarkMode(!darkMode);
+  }, [darkMode]);
   return (
-    <DarkModeContext.Provider value={value}>
-      {children}
-    </DarkModeContext.Provider>
+    <DarkModeStateContext.Provider value={useMemo(() => ({
+      darkMode
+    }), [darkMode])}
+    >
+      <DarkModeSetStateContext.Provider value={toggleDarkMode}>
+        {children}
+      </DarkModeSetStateContext.Provider>
+    </DarkModeStateContext.Provider>
   );
 };
 export default DarkModeContextWrapper;
