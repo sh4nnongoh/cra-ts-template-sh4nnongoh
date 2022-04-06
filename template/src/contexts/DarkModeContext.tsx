@@ -7,6 +7,7 @@ export const DarkModeContext = createContext({
     // stub
   }
 });
+// TO-DO: https://stackoverflow.com/questions/54119268/how-to-use-react-hooks-context-with-multiple-values-for-providers
 const DarkModeContextWrapper: FC = ({ children }): ReactElement => {
   const [darkMode, setDarkMode] = useState(JSON.parse(localStorage.getItem("DarkMode") || "false"));
   const toggleDarkMode = () => {
